@@ -21,6 +21,9 @@ export default function Experience() {
             Add entries to src/data/experience.js to populate this timeline.
           </p>
         )}
+        <div className="mt-8 p-8 md:p-10 bg-white text-gray-900 rounded-lg shadow-lg aspect-square max-w-lg ml-auto flex flex-col justify-center text-right">
+                  {/* Place your experience content here */}
+               </div>
       </Container>
     </section>
   );

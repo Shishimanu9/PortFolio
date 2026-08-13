@@ -30,6 +30,9 @@ export default function Services() {
             Add entries to src/data/services.js to populate this section.
           </p>
         )}
+         <div className="mt-8 p-8 md:p-10 bg-white text-gray-900 rounded-lg shadow-lg aspect-square max-w-lg ml-auto flex flex-col justify-center text-right">
+              {/* Place your services content/mapping here */}
+                 </div>
       </Container>
     </section>
   );

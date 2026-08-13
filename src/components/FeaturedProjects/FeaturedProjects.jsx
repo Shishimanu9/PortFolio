@@ -26,6 +26,9 @@ export default function FeaturedProjects() {
             Add entries to src/data/projects.js to populate this section.
           </p>
         )}
+        <div className="mt-8 p-8 md:p-10 bg-white text-gray-900 rounded-lg shadow-lg aspect-square max-w-lg flex flex-col justify-center text-left">
+              {/* Place your projects content here */}
+                 </div>
       </Container>
     </section>
   );

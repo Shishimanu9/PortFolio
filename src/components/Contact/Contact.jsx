@@ -20,6 +20,9 @@ export default function Contact() {
             <ContactLink key={social.id} social={social} />
           ))}
         </div>
+        <div className="mt-8 p-8 md:p-10 bg-white text-gray-900 rounded-lg shadow-lg aspect-square max-w-lg ml-auto flex flex-col justify-center text-right">
+                 {/* Place your contact content here */}
+                         </div>
       </Container>
     </section>
   );
