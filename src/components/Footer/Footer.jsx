@@ -16,17 +16,20 @@ export default function Footer() {
         </p>
 
         <div className="flex gap-5">
-          {socials.map((social) => (
-            <a
-              key={social.id}
-              href={social.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs text-secondary hover:text-primary transition-colors"
-            >
-              {social.label}
-            </a>
-          ))}
+          {/* Only render entries with a real link (e.g. skip "Location") */}
+          {socials
+            .filter((social) => social.href)
+            .map((social) => (
+              <a
+                key={social.id}
+                href={social.href}
+                target={social.href.startsWith("http") ? "_blank" : undefined}
+                rel="noopener noreferrer"
+                className="text-xs text-secondary hover:text-primary transition-colors"
+              >
+                {social.label}
+              </a>
+            ))}
         </div>
       </Container>
     </footer>

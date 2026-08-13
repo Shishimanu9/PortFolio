@@ -4,11 +4,7 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
-      // Design tokens live here, not scattered through components.
-      // Fill in the actual palette / type scale when you design the UI —
-      // these are placeholder hooks so components have something
-      // consistent to reference from day one (e.g. bg-background,
-      // text-primary, font-display).
+      // Design tokens
       colors: {
         background: "var(--color-background)",
         surface: "var(--color-surface)",
@@ -25,6 +21,23 @@ export default {
       },
       maxWidth: {
         content: "1200px",
+      },
+      // Animations & Keyframes
+      keyframes: {
+        // Left-to-Right Continuous Infinite Animation for Featured Projects
+        marquee: {
+          '0%': { transform: 'translateX(-50%)' },
+          '100%': { transform: 'translateX(0%)' },
+        },
+        // Continuous Smooth Color-Shifting for Resume Download Button
+        'gradient-shift': {
+          '0%, 100%': { 'background-position': '0% 50%' },
+          '50%': { 'background-position': '100% 50%' },
+        },
+      },
+      animation: {
+        marquee: 'marquee 25s linear infinite',
+        'color-change': 'gradient-shift 4s ease infinite',
       },
     },
   },

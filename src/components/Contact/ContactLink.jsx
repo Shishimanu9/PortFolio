@@ -1,23 +1,37 @@
 import PropTypes from "prop-types";
 import * as FiIcons from "react-icons/fi";
 
-/** Single contact row (icon + label + value), used by Contact.jsx. */
+/**
+ * Single contact row, styled for the light SectionCard it renders
+ * inside (see Contact.jsx). Renders a plain (non-clickable) row when
+ * `href` is empty — e.g. "Location" has a value but nothing to link to.
+ */
 export default function ContactLink({ social }) {
   const { icon, label, value, href } = social;
   const Icon = FiIcons[icon] ?? FiIcons.FiLink;
 
+  const content = (
+    <>
+      <Icon className="text-cyan-500" aria-hidden="true" />
+      <span className="text-sm text-gray-700">
+        <span className="text-gray-400 mr-1">{label}:</span>
+        {value}
+      </span>
+    </>
+  );
+
+  if (!href) {
+    return <span className="flex items-center gap-3">{content}</span>;
+  }
+
   return (
     <a
       href={href}
-      target={href?.startsWith("http") ? "_blank" : undefined}
+      target={href.startsWith("http") ? "_blank" : undefined}
       rel="noopener noreferrer"
-      className="flex items-center gap-3 text-secondary hover:text-primary transition-colors"
+      className="flex items-center gap-3 hover:opacity-70 transition-opacity"
     >
-      <Icon aria-hidden="true" />
-      <span className="text-sm">
-        <span className="text-muted mr-1">{label}:</span>
-        {value}
-      </span>
+      {content}
     </a>
   );
 }

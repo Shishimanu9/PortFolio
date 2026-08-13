@@ -4,13 +4,10 @@ import Badge from "../common/Badge.jsx";
 import TagList from "../common/TagList.jsx";
 
 /**
- * Reusable project card. Purely presentational — accepts a single
- * `project` object (see data/projects.js for the exact shape) and
- * renders it. No project content lives here.
- *
- * Kept as one component (not split further) because thumbnail/badges/
- * tags/actions always render together and never independently — the
- * only thing that varies is the data mapped in from projects.js.
+ * Reusable project row. Accepts a single `project` object (see
+ * data/projects.js for the exact shape) and renders it — no project
+ * content lives here. Styled for the light SectionCard it renders
+ * inside (see FeaturedProjects.jsx), not the dark page background.
  */
 export default function ProjectCard({ project }) {
   const {
@@ -25,47 +22,42 @@ export default function ProjectCard({ project }) {
   } = project;
 
   return (
-    <article className="group flex flex-col rounded-lg border border-border bg-surface overflow-hidden">
-      <div className="relative aspect-video bg-background">
-        {thumbnail ? (
-          <img
-            src={thumbnail}
-            alt={title}
-            loading="lazy"
-            className="h-full w-full object-cover"
-          />
-        ) : (
-          <div className="h-full w-full flex items-center justify-center text-muted text-sm">
-            Thumbnail
-          </div>
-        )}
-
+    <article className="py-4 border-b border-gray-100 last:border-none">
+      <div className="flex items-start justify-between gap-3">
+        <h3 className="font-semibold text-sm text-gray-900">{title}</h3>
         {(featured || research) && (
-          <div className="absolute top-3 left-3 flex gap-2">
-            {featured && <Badge>Featured</Badge>}
-            {research && <Badge variant="outline">Research</Badge>}
+          <div className="flex gap-1.5 shrink-0">
+            {featured && <Badge variant="light">Featured</Badge>}
+            {research && <Badge variant="outline-light">Research</Badge>}
           </div>
         )}
       </div>
 
-      <div className="flex flex-col flex-1 p-5 gap-3">
-        <h3 className="font-display text-lg text-primary">{title}</h3>
+      {thumbnail && (
+        <img
+          src={thumbnail}
+          alt={title}
+          loading="lazy"
+          className="w-full aspect-video object-cover rounded-md mt-2"
+        />
+      )}
 
-        {description && (
-          <p className="text-sm text-secondary leading-relaxed">
-            {description}
-          </p>
-        )}
+      {description && (
+        <p className="text-xs text-gray-600 leading-relaxed mt-2">{description}</p>
+      )}
 
-        <TagList tags={tags} />
+      <div className="mt-2">
+        <TagList tags={tags} variant="light" />
+      </div>
 
-        <div className="mt-auto flex gap-4 pt-3">
+      {(githubUrl || liveUrl) && (
+        <div className="flex gap-4 pt-2">
           {githubUrl && (
             <a
               href={githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-sm text-secondary hover:text-primary transition-colors"
+              className="inline-flex items-center gap-1.5 text-xs text-gray-500 hover:text-gray-900 transition-colors"
             >
               <FiGithub aria-hidden="true" /> Code
             </a>
@@ -75,13 +67,13 @@ export default function ProjectCard({ project }) {
               href={liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-sm text-secondary hover:text-primary transition-colors"
+              className="inline-flex items-center gap-1.5 text-xs text-gray-500 hover:text-gray-900 transition-colors"
             >
               <FiExternalLink aria-hidden="true" /> Live Demo
             </a>
           )}
         </div>
-      </div>
+      )}
     </article>
   );
 }

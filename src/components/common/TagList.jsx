@@ -1,17 +1,20 @@
 import PropTypes from "prop-types";
 
-/** Renders a list of tech-stack tags. Used by ProjectCard and can be
- * reused anywhere a small pill list is needed. */
-export default function TagList({ tags }) {
+/** Renders a list of tech-stack tags. "dark" (default) is for use on
+ * the dark page background; "light" is for use inside a white
+ * SectionCard. */
+export default function TagList({ tags, variant = "dark" }) {
   if (!tags?.length) return null;
+
+  const itemClass =
+    variant === "light"
+      ? "text-xs text-gray-600 border border-gray-200 rounded px-2 py-0.5"
+      : "text-xs text-secondary border border-border rounded px-2 py-0.5";
 
   return (
     <ul className="flex flex-wrap gap-2">
       {tags.map((tag) => (
-        <li
-          key={tag}
-          className="text-xs text-secondary border border-border rounded px-2 py-0.5"
-        >
+        <li key={tag} className={itemClass}>
           {tag}
         </li>
       ))}
@@ -21,4 +24,5 @@ export default function TagList({ tags }) {
 
 TagList.propTypes = {
   tags: PropTypes.arrayOf(PropTypes.string),
+  variant: PropTypes.oneOf(["dark", "light"]),
 };
