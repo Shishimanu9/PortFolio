@@ -39,8 +39,8 @@ export default function Navbar() {
             Yashika Basapure
           </a>
 
-          {/* Nav Links & CTA on Right Side */}
-          <div className="flex items-center gap-6">
+          {/* Nav Links on Right Side */}
+          <div className="flex items-center">
             <div className="hidden lg:flex items-center gap-2 bg-black/40 px-3 py-1.5 rounded-full border border-white/10">
               {navLinks.map((link) => (
                 <a
@@ -52,13 +52,6 @@ export default function Navbar() {
                 </a>
               ))}
             </div>
-
-            <a
-              href="#contact"
-              className="bg-white hover:bg-slate-200 text-black font-extrabold text-sm md:text-base px-6 py-2.5 rounded-full transition-all duration-200 shadow-md hover:scale-105"
-            >
-              Get in Touch
-            </a>
           </div>
         </nav>
       </Container>

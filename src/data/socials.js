@@ -6,34 +6,7 @@
  */
 
 export const socials = [
-  {
-    id: "email",
-    label: "Email",
-    value: "yashikab601@gmail.com",
-    href: "mailto:yashikab601@gmail.com",
-    icon: "FiMail",
-  },
-  {
-    id: "phone",
-    label: "Phone",
-    value: "7385044945",
-    href: "tel:+917385044945",
-    icon: "FiPhone",
-  },
-  {
-    id: "linkedin",
-    label: "LinkedIn",
-    value: "LinkedIn", // TODO: replace with your LinkedIn handle
-    href: "#", // TODO: replace with your LinkedIn profile URL
-    icon: "FiLinkedin",
-  },
-  {
-    id: "github",
-    label: "GitHub",
-    value: "GitHub", // TODO: replace with your GitHub handle
-    href: "#", // TODO: replace with your GitHub profile URL
-    icon: "FiGithub",
-  },
+ 
   {
     id: "location",
     label: "Location",

@@ -39,35 +39,35 @@ export default function Contact() {
                 href="tel:7385044945"
                 className="flex items-center gap-2 bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 px-5 py-2.5 rounded-full text-sm font-mono font-medium transition-all"
               >
-                <span>📞</span>
+                <span></span>
                 <span>+91 7385044945</span>
               </a>
 
               {/* LinkedIn */}
               <a
-                href="https://linkedin.com" // Replace with your actual LinkedIn link
+                href="https://www.linkedin.com/in/yashika-basapure-06039b24y/" // Replace with your actual LinkedIn link
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center gap-2 bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 px-5 py-2.5 rounded-full text-sm font-mono font-medium transition-all"
               >
-                <span>💼</span>
+                <span></span>
                 <span>LinkedIn</span>
               </a>
 
               {/* GitHub */}
               <a
-                href="https://github.com" // Replace with your actual GitHub link
+                href="https://github.com/Shishimanu9" // Replace with your actual GitHub link
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center gap-2 bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 px-5 py-2.5 rounded-full text-sm font-mono font-medium transition-all"
               >
-                <span>💻</span>
+                <span></span>
                 <span>GitHub</span>
               </a>
 
               {/* Location */}
               <div className="flex items-center gap-2 bg-white/5 text-slate-400 border border-white/10 px-5 py-2.5 rounded-full text-sm font-mono font-medium">
-                <span>📍</span>
+                <span></span>
                 <span>Pune, India</span>
               </div>
             </div>

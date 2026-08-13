@@ -1,46 +1,37 @@
 import Container from "../common/Container.jsx";
 
-/**
- * Resume CTA — Features an animated color-shifting, high-visibility download button.
- */
 export default function Resume() {
   return (
-    <section id="resume" className="py-24">
-      <Container className="text-center">
-        <h2 className="font-display text-3xl md:text-5xl font-extrabold text-white tracking-tight">
-          Interested in working together?
-        </h2>
-        <p className="text-gray-400 mt-4 text-base md:text-lg max-w-xl mx-auto font-medium">
-          Check out my complete resume to see my detailed academic background, full research experience, and technical achievements.
-        </p>
-        
-        <div className="mt-10 flex justify-center">
-          {/* Animated Color-Changing Super Button */}
-          <a
-            href="/resume.pdf" // Ensure resume.pdf is placed in your public/ folder
-            download="Yashika_Basapure_Resume.pdf"
-            className="group relative inline-flex items-center justify-center gap-3 px-10 py-5 text-lg md:text-xl font-bold text-white rounded-full bg-gradient-to-r from-red-500 via-amber-500 via-emerald-500 via-sky-500 to-purple-600 bg-[length:300%_300%] animate-color-change shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300"
-          >
-            {/* Soft background glow */}
-            <span className="absolute -inset-1 rounded-full bg-gradient-to-r from-red-500 via-sky-500 to-purple-600 bg-[length:300%_300%] animate-color-change blur-lg opacity-40 group-hover:opacity-80 transition duration-300 -z-10" />
+    <section id="resume" className="py-16">
+      <Container className="flex flex-col items-center text-center">
+        <div className="bg-[#18181b] border border-white/10 rounded-[3rem] p-8 md:p-12 w-full max-w-3xl shadow-2xl flex flex-col items-center justify-center gap-6">
+          <h3 className="text-2xl md:text-3xl font-extrabold text-white tracking-tight font-display">
+            Interested in my complete background?
+          </h3>
+          <p className="text-slate-300 text-base md:text-lg max-w-xl">
+            Download my full resume for a detailed overview of my education, experience, research, and technical projects.
+          </p>
 
-            {/* Download Icon */}
+          {/* Full Gradient Background Button */}
+          <a
+            href="/resume.pdf"
+            download="Yashika_Basapure_Resume.pdf"
+            className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-pink-500 via-purple-500 via-blue-500 to-sky-400 bg-[length:200%_200%] animate-color-change text-white font-extrabold text-base md:text-lg px-9 py-4 rounded-full shadow-lg hover:shadow-pink-500/25 hover:scale-105 transition-all duration-300 cursor-pointer"
+          >
+            <span>Download Resume</span>
             <svg
-              className="w-6 h-6 animate-bounce"
+              className="w-5 h-5 text-white group-hover:translate-y-0.5 transition-transform"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth="2.5"
+                strokeWidth={2.5}
                 d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
               />
             </svg>
-
-            <span>Download Resume</span>
           </a>
         </div>
       </Container>
