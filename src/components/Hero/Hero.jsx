@@ -6,22 +6,28 @@ export default function Hero() {
       <Container className="flex flex-col items-center text-center max-w-4xl mx-auto">
         
         {/* Profile Image Squircle Container */}
-<div className="relative mb-8 group">
-  <div className="w-28 h-28 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-[2.5rem] bg-[#18181b] p-1.5 border border-white/20 shadow-2xl transition-transform duration-300 group-hover:scale-105">
-    <img
-      src="/images/Y_image.jpeg" // or .jpg / .jpeg depending on your file
-      alt="Yashika Basapure"
-      className="w-full h-full object-cover rounded-[2rem] transition-all duration-300"
-    />
-  </div>
-  {/* Subtle Monochrome Glow Behind Image */}
-  <div className="absolute inset-0 bg-white/5 rounded-[2.5rem] blur-xl -z-10 group-hover:bg-white/10 transition-all" />
-</div>
+        <div className="relative mb-8 group">
+          <div className="w-28 h-28 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-[2.5rem] bg-[#18181b] p-1.5 border border-white/20 shadow-2xl transition-transform duration-300 group-hover:scale-105">
+            <img
+              src="/images/Y_image.jpeg"
+              alt="Yashika Basapure"
+              className="w-full h-full object-cover rounded-[2rem] transition-all duration-300"
+            />
+          </div>
+          {/* Subtle Monochrome Glow Behind Image */}
+          <div className="absolute inset-0 bg-white/5 rounded-[2.5rem] blur-xl -z-10 group-hover:bg-white/10 transition-all" />
+        </div>
 
-        {/* Status Pill Badge */}
-        <div className="inline-flex items-center gap-2.5 bg-[#18181b] border border-white/10 px-5 py-2 rounded-full mb-6 shadow-md">
-          <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
-          <span className="text-xs md:text-sm font-mono text-slate-300 tracking-wide">
+        {/* Status Pill Badge - Glowing Green Edition */}
+        <div className="inline-flex items-center gap-2.5 bg-[#18181b] border border-emerald-500/30 px-5 py-2 rounded-full mb-6 shadow-[0_0_15px_rgba(16,185,129,0.15)]">
+          {/* Pulsing Glowing Green Dot */}
+          <span className="relative flex h-2.5 w-2.5">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500 shadow-[0_0_8px_#10b981]"></span>
+          </span>
+
+          {/* Glowing Green Text */}
+          <span className="text-xs md:text-sm font-mono text-emerald-400 tracking-wide font-medium drop-shadow-[0_0_6px_rgba(52,211,153,0.4)]">
             Seeking ML &amp; Data Science Opportunities
           </span>
         </div>
