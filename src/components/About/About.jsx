@@ -31,7 +31,7 @@ export default function About() {
               </h3>
 
               <p className="text-slate-300 text-base md:text-lg leading-relaxed font-normal pt-2">
-                I specialize in building end-to-end Machine Learning systems, satellite-imagery workflows, and production multimodal pipelines. My experience includes work as a Geospatial Data Scientist Intern at Agtmap.com, along with independent research on virtual brain inference, applied fraud detection, and speech recognition.
+                I specialize in building end-to-end Machine Learning systems, satellite-imagery workflows, and production multimodal pipelines. My experience includes work as a Geospatial Data Scientist Intern at Agtmap.com, along with independent research on Virtual Brain Inference along with SDE experience with Thyssenkrupp ABS.
               </p>
             </div>
 

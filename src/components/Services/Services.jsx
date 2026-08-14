@@ -5,7 +5,7 @@ const services = [
   {
     title: "Machine Learning & Deep Learning",
     description:
-      "Model design, training, and evaluation with TensorFlow and PyTorch — from classical ML baselines to deep learning systems.",
+      "Model design, training, and evaluation with TensorFlow and PyTorch from classical ML baselines to deep learning systems.",
     icon: (
       <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M3 9h2m-2 6h2m14-6h2m-2 6h2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
@@ -47,7 +47,7 @@ const services = [
   {
     title: "Data Engineering & Pipelines",
     description:
-      "Building reliable data pipelines — preprocessing, transformation, and storage — using Pandas, NumPy, PostgreSQL, and MongoDB.",
+      "Building reliable data pipelines preprocessing, transformation, and storage using Pandas, NumPy, PostgreSQL, and MongoDB along with experience of Microsoft Azure and Blob storage",
     icon: (
       <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
